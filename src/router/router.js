@@ -45,6 +45,7 @@ export const router = createBrowserRouter(
                 <Route path="product/:id" element={<ProductItem />} />
                 <Route path="test-market/login" element={<AuthPage />} />
                 <Route path="login" element={<AuthPage />} />
+                <Route path="test-market/login" element={<AuthPage />} />
                 <Route path="newcomp" element={<NewComponent />} />
             </Route>
         </Route>
