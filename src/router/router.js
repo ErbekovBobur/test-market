@@ -30,23 +30,21 @@ export const router = createBrowserRouter(
         >
             <Route errorElement={<ErrorPage />}>
                 <Route index element={<Main />} />
-                <Route path="admin" element={<AdminPage />}>
+                <Route path="test-market/admin" element={<AdminPage />}>
                     <Route index element={<Statistic />} />
-                    <Route path="add" element={<AddProduct />} />
-                    <Route path="edit" element={<EditProduct />} />
-                    <Route path="edit/:id" element={<ProductForm />} />
-                    <Route path="control" element={<AdminControl />}>
-                        <Route path="discount" element={<h1>discount</h1>} />
-                        <Route path="users" element={<Users />} />
-                        <Route path="category" element={<Category />} />
+                    <Route path="test-market/add" element={<AddProduct />} />
+                    <Route path="test-market/edit" element={<EditProduct />} />
+                    <Route path="test-market/edit/:id" element={<ProductForm />} />
+                    <Route path="test-market/control" element={<AdminControl />}>
+                        <Route path="test-market/discount" element={<h1>discount</h1>} />
+                        <Route path="test-market/users" element={<Users />} />
+                        <Route path="test-market/category" element={<Category />} />
                     </Route>
                 </Route>
-                <Route path="favorite" element={<FavoritePage />} />
-                <Route path="product/:id" element={<ProductItem />} />
+                <Route path="test-market/favorite" element={<FavoritePage />} />
+                <Route path="test-market/product/:id" element={<ProductItem />} />
                 <Route path="test-market/login" element={<AuthPage />} />
-                <Route path="login" element={<AuthPage />} />
-                <Route path="test-market/login" element={<AuthPage />} />
-                <Route path="newcomp" element={<NewComponent />} />
+                <Route path="test-market/newcomp" element={<NewComponent />} />
             </Route>
         </Route>
     )
