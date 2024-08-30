@@ -22,7 +22,7 @@ import NewComponent from "../component/New Component/newComponent";
 export const router = createBrowserRouter(
     createRoutesFromElements(
         <Route
-            path="/"
+            path="test-market/"
             element={<Template />}
             // loader={rootLoader}
             // action={rootAction}
@@ -45,6 +45,7 @@ export const router = createBrowserRouter(
                 <Route path="test-market/favorite" element={<FavoritePage />} />
                 <Route path="test-market/product/:id" element={<ProductItem />} />
                 <Route path="test-market/login" element={<AuthPage />} />
+                <Route path="login" element={<AuthPage />} />
                 <Route path="test-market/newcomp" element={<NewComponent />} />
             </Route>
         </Route>
