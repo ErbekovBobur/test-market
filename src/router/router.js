@@ -22,7 +22,7 @@ import NewComponent from "../component/New Component/newComponent";
 export const router = createBrowserRouter(
     createRoutesFromElements(
         <Route
-            path="erbekovbobur.github.io/test-market//"
+            path="/test-market/"
             element={<Template />}
             // loader={rootLoader}
             // action={rootAction}
