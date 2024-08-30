@@ -24,9 +24,9 @@ export const router = createBrowserRouter(
         <Route
             path="/"
             element={<Template />}
-        // loader={rootLoader}
-        // action={rootAction}
-        // errorElement={<ErrorPage />}
+            loader={rootLoader}
+            action={rootAction}
+            errorElement={<ErrorPage />}
         >
             <Route errorElement={<ErrorPage />}>
                 <Route index element={<Main />} />
