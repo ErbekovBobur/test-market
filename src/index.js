@@ -6,8 +6,6 @@ import { store } from './services/store';
 import { RouterProvider } from "react-router-dom";
 import { router } from './router/router'
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import App from './App';
-
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
