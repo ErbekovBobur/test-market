@@ -30,7 +30,7 @@ export const router = createBrowserRouter(
         >
             <Route errorElement={<ErrorPage />}>
                 <Route index element={<Main />} />
-                <Route path="test-market/admin" element={<AdminPage />}>
+                <Route path="admin" element={<AdminPage />}>
                     <Route index element={<Statistic />} />
                     <Route path="add" element={<AddProduct />} />
                     <Route path="edit" element={<EditProduct />} />
@@ -41,11 +41,9 @@ export const router = createBrowserRouter(
                         <Route path="category" element={<Category />} />
                     </Route>
                 </Route>
-                <Route path="/test-market/" element={<Main />} />
-                <Route path="test-market/favorite" element={<FavoritePage />} />
+                <Route path="/test-market" element={<Main />} />
                 <Route path="favorite" element={<FavoritePage />} />
-                <Route path="test-market/product/:id" element={<ProductItem />} />
-                <Route path="test-market/login" element={<AuthPage />} />
+                <Route path="product/:id" element={<ProductItem />} />
                 <Route path="login" element={<AuthPage />} />
                 <Route path="test-market/newcomp" element={<NewComponent />} />
             </Route>

@@ -33,7 +33,7 @@ function NavbarN() {
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav justify variant="underline" className="flex-fill" >
-                                <NavLink className="nav-link" to='/' >Главная</NavLink>
+                                <NavLink className="nav-link" to='/test-market/' >Главная</NavLink>
                                 <NavLink className="nav-link" to='/favorite' >Favorite</NavLink>
                                 {isAdmin && <NavLink className="nav-link" to='/admin' >Admin</NavLink>}
                             </Nav>

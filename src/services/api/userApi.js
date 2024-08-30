@@ -4,7 +4,8 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 export const userApi = createApi({
     reducerPath: 'userApi',
-    baseQuery: fetchBaseQuery({ baseUrl: 'http://127.0.0.1:5000/users/' }),
+    // baseQuery: fetchBaseQuery({ baseUrl: 'http://127.0.0.1:5000/users/' }),
+    baseQuery: fetchBaseQuery({ baseUrl: 'https://server-wheat-sigma-57.vercel.app/users/' }),
     tagTypes: ['login', 'password'],
     endpoints: (build) => ({
         // getProduct: build.query({
@@ -24,7 +25,7 @@ export const userApi = createApi({
             },
             invalidatesTags: ['login', 'password'],
         }),
-        
+
         getUsers: build.query({
             query: (data) => ({
                 url: 'users',
