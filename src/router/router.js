@@ -32,13 +32,13 @@ export const router = createBrowserRouter(
                 <Route index element={<Main />} />
                 <Route path="test-market/admin" element={<AdminPage />}>
                     <Route index element={<Statistic />} />
-                    <Route path="test-market/add" element={<AddProduct />} />
-                    <Route path="test-market/edit" element={<EditProduct />} />
-                    <Route path="test-market/edit/:id" element={<ProductForm />} />
-                    <Route path="test-market/control" element={<AdminControl />}>
-                        <Route path="test-market/discount" element={<h1>discount</h1>} />
-                        <Route path="test-market/users" element={<Users />} />
-                        <Route path="test-market/category" element={<Category />} />
+                    <Route path="add" element={<AddProduct />} />
+                    <Route path="edit" element={<EditProduct />} />
+                    <Route path="edit/:id" element={<ProductForm />} />
+                    <Route path="control" element={<AdminControl />}>
+                        <Route path="discount" element={<h1>discount</h1>} />
+                        <Route path="users" element={<Users />} />
+                        <Route path="category" element={<Category />} />
                     </Route>
                 </Route>
                 <Route path="/test-market/" element={<Main />} />
