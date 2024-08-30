@@ -22,7 +22,7 @@ import NewComponent from "../component/New Component/newComponent";
 export const router = createBrowserRouter(
     createRoutesFromElements(
         <Route
-            path="/"
+            path="/test-market/"
             element={<Template />}
             // loader={rootLoader}
             // action={rootAction}
@@ -30,7 +30,6 @@ export const router = createBrowserRouter(
         >
             <Route errorElement={<ErrorPage />}>
                 <Route index element={<Main />} />
-                <Route path="test-market" element={<Main />} />
                 <Route path="test-market/admin" element={<AdminPage />}>
                     <Route index element={<Statistic />} />
                     <Route path="test-market/add" element={<AddProduct />} />
@@ -42,6 +41,7 @@ export const router = createBrowserRouter(
                         <Route path="test-market/category" element={<Category />} />
                     </Route>
                 </Route>
+                <Route path="/test-market/" element={<Main />} />
                 <Route path="test-market/favorite" element={<FavoritePage />} />
                 <Route path="test-market/product/:id" element={<ProductItem />} />
                 <Route path="test-market/login" element={<AuthPage />} />
