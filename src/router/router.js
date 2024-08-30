@@ -22,29 +22,29 @@ import NewComponent from "../component/New Component/newComponent";
 export const router = createBrowserRouter(
     createRoutesFromElements(
         <Route
-            path="*"
+            path="/"
             element={<Template />}
-            // loader={rootLoader}
-            // action={rootAction}
-            errorElement={<ErrorPage />}
+        // loader={rootLoader}
+        // action={rootAction}
+        // errorElement={<ErrorPage />}
         >
             <Route errorElement={<ErrorPage />}>
                 <Route index element={<Main />} />
-                <Route path="admin/" element={<AdminPage />}>
+                <Route path="admin" element={<AdminPage />}>
                     <Route index element={<Statistic />} />
-                    <Route path="add/" element={<AddProduct />} />
-                    <Route path="edit/" element={<EditProduct />} />
+                    <Route path="add" element={<AddProduct />} />
+                    <Route path="edit" element={<EditProduct />} />
                     <Route path="edit/:id" element={<ProductForm />} />
-                    <Route path="control/" element={<AdminControl />}>
+                    <Route path="control" element={<AdminControl />}>
                         <Route path="discount" element={<h1>discount</h1>} />
                         <Route path="users" element={<Users />} />
                         <Route path="category" element={<Category />} />
                     </Route>
                 </Route>
-                <Route path="favorite/" element={<FavoritePage />} />
-                <Route path="/product/:id" element={<ProductItem />} />
-                <Route path="/login" element={<AuthPage />} />
-                <Route path="/newcomp" element={<NewComponent />} />
+                <Route path="favorite" element={<FavoritePage />} />
+                <Route path="product/:id" element={<ProductItem />} />
+                <Route path="login" element={<AuthPage />} />
+                <Route path="newcomp" element={<NewComponent />} />
             </Route>
         </Route>
     )
