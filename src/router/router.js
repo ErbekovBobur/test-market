@@ -43,6 +43,7 @@ export const router = createBrowserRouter(
                 </Route>
                 <Route path="/test-market/" element={<Main />} />
                 <Route path="test-market/favorite" element={<FavoritePage />} />
+                <Route path="favorite" element={<FavoritePage />} />
                 <Route path="test-market/product/:id" element={<ProductItem />} />
                 <Route path="test-market/login" element={<AuthPage />} />
                 <Route path="login" element={<AuthPage />} />
