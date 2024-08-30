@@ -1,7 +1,7 @@
 {
   "name": "d_15",
   "version": "0.1.0",
-  "homepage": "https://ErbekovBobur.github.io/test-market/",
+  "homepage": "https://ErbekovBobur.github.io",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
