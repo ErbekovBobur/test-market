@@ -1,16 +1,16 @@
 import { Container, Row } from 'react-bootstrap';
 import ProductCarousel from "../component/Products/ProductCarousel";
 import ProductList from "../component/Products/ProductList";
-import { useGetCategoryQuery, useGetProductQuery } from '../services/api/productApi';
+import { useGetProductQuery } from '../services/api/productApi';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { toProductList } from '../services/slices/productsSlice';
 
 function Main() {
-  const { data, isError, isLoading } = useGetProductQuery();
+  const { data } = useGetProductQuery();
   const dispatch = useDispatch();
   const [products, setProducts] = useState([]);
-  const foundList = useSelector(state => state.product.foundList);  
+  const foundList = useSelector(state => state.product.foundList);
 
   useEffect(() => {
     try {
