@@ -53,8 +53,10 @@ const people = [
   },
 ]
 
-// export default function NewComponent() {
-//   return (
-//     https://react.semantic-ui.com/elements/input/
-//   )
-// }
+export default function NewComponent() {
+  return (
+    <p>
+      'https://react.semantic-ui.com/elements/input/'
+    </p>
+  )
+}

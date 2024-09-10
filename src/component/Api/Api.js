@@ -14,7 +14,7 @@ function Api() {
     }, [])
     return (
         <div>
-            
+
             <ol>
                 {
                     apis.map((elem, index) =>
@@ -40,4 +40,4 @@ function Api() {
     )
 }
 
-export default Api
+export default Api;

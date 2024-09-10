@@ -1,6 +1,8 @@
 import React from 'react';
 import style from '../../style/footer.module.css';
 import { Col, Container, Row } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
+
 import { ReactComponent as FBLogo } from '../../img/fb.svg';
 import { ReactComponent as InstaLogo } from '../../img/insta.svg';
 import { ReactComponent as TGLogo } from '../../img/tg.svg';
@@ -18,7 +20,9 @@ function Footer() {
             <InstaLogo className={style.logo} />
           </Col>
           <Col md={1} className='d-grid' >
-            <TGLogo className={style.logo} />
+            <a href='https://t.me/lbobur' target="_blank">
+              <TGLogo className={style.logo} />
+            </a>
           </Col>
         </Row>
         <Row className='justify-content-center' >
@@ -32,7 +36,7 @@ function Footer() {
             Copyright © 2023 Bobur.
           </Col>
         </Row>
-      </Container>
+      </Container >
     </>
   )
 }
