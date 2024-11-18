@@ -12,7 +12,7 @@ function CardTop({ props }) {
     const loggedIn = useSelector((state) => state.auth.loggedIn);
 
     function checkFavoriteList() {
-        if(!favoriteList.length){
+        if (!favoriteList.length) {
             setActive(false);
         }
         favoriteList.filter((item) => {
@@ -24,7 +24,7 @@ function CardTop({ props }) {
         })
     };
 
-    
+
     function addToFavorite(active, id) {
         if (active) {
             dispatch(delFromFavoriteList(id));
@@ -39,12 +39,12 @@ function CardTop({ props }) {
 
     useEffect(() => {
         checkFavoriteList();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [active, loggedIn]);
     return (
         <>
             <div className={style.topBox} >
-                <NavLink to={`/product/${props.product.product_id}`}>
+                <NavLink to={`product/${props.product.product_id}`}>
                     <img className={style.logo} src={props.product.url} alt="img" />
                 </NavLink>
                 <div className={style.img} >

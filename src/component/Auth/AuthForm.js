@@ -29,7 +29,7 @@ function AuthForm() {
                     if (res.command && res.command) {
                         dispatch(signUserSuccess({ login: user, admin: false }));
                         setIsRegister(false);
-                        navigate('/');
+                        navigate('/test-market/');
                         dispatch(delFromFavoriteList(-1));
                     };
                 })
@@ -49,8 +49,8 @@ function AuthForm() {
             dispatch(signUserSuccess(result.data[0]));
             dispatch(delFromFavoriteList(-1));
             if (result.data[0].admin) {
-                navigate('/admin')
-            } else navigate('/');
+                navigate('/test-market/admin/')
+            } else navigate('/test-market/');
         } else if (result.status === "fulfilled" && result.data.length === 0) {
             setErrorMessage('Ошибка авторизации');
             setTimeout(() => {

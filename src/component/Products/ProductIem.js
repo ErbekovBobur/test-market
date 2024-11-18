@@ -9,6 +9,10 @@ import Rate from "../../UI/rate";
 import { useGetCurrentProductQuery } from '../../services/api/productApi';
 
 function ProductItem() {
+  const mystyle = {
+    width: "20px",
+    height: "20px"
+  };
   let { id } = useParams();
   const dispatch = useDispatch();
   const { data, isError, isLoading } = useGetCurrentProductQuery(+id);
@@ -100,15 +104,18 @@ function ProductItem() {
                 </Col>
                 <Col >
                   <Row className='gap-1 border p-1 '>
-                    <Col className='d-grid'>
+                    <Col className='d-grid h-25'>
                       <Button onClick={tobasket}>В корзину </Button>
                     </Col>
-                    <Col className='d-grid'>
-                      <Button variant="success"
+                    <Col className='d-grid h-25'>
+                      <Button variant="success" className='d-flex justify-content-evenly'
                         onClick={() => addToFavorite(activeHeart, Number(id))}
-                        className="position-relative" >
-                        В избранное
-                        <div className={style.heart} >
+                      // className="position-relative" 
+                      >
+                        <Row>
+                          В избранное
+                        </Row>
+                        <div className={style.heart} style={{ width: "20px", height: "20px" }}>
                           <Heart inactiveColor='#198754' isActive={activeHeart} onClick={() => { }} />
                         </div>
                       </Button>
@@ -117,9 +124,9 @@ function ProductItem() {
                 </Col>
               </Col>
             </Row>
-          </Col>
-        </Row>
-      </Container>
+          </Col >
+        </Row >
+      </Container >
     </>
   )
 }

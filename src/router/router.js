@@ -22,7 +22,7 @@ import NewComponent from "../component/New Component/newComponent";
 export const router = createBrowserRouter(
     createRoutesFromElements(
         <Route
-            path="/test-market/"
+            path="test-market/"
             element={<Template />}
             // loader={rootLoader}
             // action={rootAction}
@@ -30,15 +30,15 @@ export const router = createBrowserRouter(
         >
             <Route errorElement={<ErrorPage />}>
                 <Route index element={<Main />} />
-                <Route path="admin" element={<AdminPage />}>
+                <Route path="admin/" element={<AdminPage />}>
                     <Route index element={<Statistic />} />
-                    <Route path="add" element={<AddProduct />} />
-                    <Route path="edit" element={<EditProduct />} />
+                    <Route path="add/" element={<AddProduct />} />
+                    <Route path="edit/" element={<EditProduct />} />
                     <Route path="edit/:id" element={<ProductForm />} />
-                    <Route path="control" element={<AdminControl />}>
-                        <Route path="discount" element={<h1>discount</h1>} />
-                        <Route path="users" element={<Users />} />
-                        <Route path="category" element={<Category />} />
+                    <Route path="control/" element={<AdminControl />}>
+                        <Route path="discount/" element={<h1>discount</h1>} />
+                        <Route path="users/" element={<Users />} />
+                        <Route path="category/" element={<Category />} />
                     </Route>
                 </Route>
                 {/* <Route path="/test-market" element={<Main />} /> */}
@@ -49,4 +49,5 @@ export const router = createBrowserRouter(
             </Route>
         </Route>
     )
+    // { basename: 'test-market' }
 );

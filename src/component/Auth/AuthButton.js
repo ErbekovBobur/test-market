@@ -12,12 +12,12 @@ function Auth() {
 
     function handleLogin() {
         if (!isLogin) {
-            navigate('/login');
+            navigate('login/');
         } else {
             dispatch(logoutUser());
             dispatch(emptyFavoriteList());
             dispatch(checkSaveFavoriteList());
-            navigate('/');
+            navigate('/test-market/');
         }
     };
     useEffect(() => {

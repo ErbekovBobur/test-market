@@ -4,8 +4,7 @@ import NavbarN from "../component/Navbar/Navbar.js";
 function Header() {
     return (
         <>
-            <NavbarN />
-            <Weather />
+            <NavbarN />            
         </>
     )
 }

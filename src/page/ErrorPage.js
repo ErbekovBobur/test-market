@@ -11,7 +11,7 @@ export default function ErrorPage() {
       <p>
         <i>{error.statusText || error.message}</i>
       </p>
-      <NavLink className="nav-link" to='/test-market' >Главная - test-market</NavLink>
+      <NavLink className="nav-link" to='/test-market/' >Главная - test-market</NavLink>
       <br />
       <NavLink className="nav-link" to='/' >Главная - "/"</NavLink>
     </div>

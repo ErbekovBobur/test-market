@@ -7,7 +7,7 @@ function AdminNavbar() {
     return (
         <>
             <Col md={9} lg={7} className='mx-auto'>
-                <Nav justify variant="tabs" defaultActiveKey="/" className='bg-dark bg-gradient'>
+                <Nav justify variant="tabs" defaultActiveKey="admin/" className='bg-dark bg-gradient'>
                     <Nav.Item>
                         <NavLink className={style.adminLink + ' nav-link'} to='control/'>Управление доступом</NavLink>
                     </Nav.Item>

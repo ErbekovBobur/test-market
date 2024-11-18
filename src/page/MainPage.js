@@ -5,6 +5,7 @@ import { useGetProductQuery } from '../services/api/productApi';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { toProductList } from '../services/slices/productsSlice';
+import Weather from '../component/Weather/Weather';
 
 function Main() {
   const { data } = useGetProductQuery();
@@ -29,6 +30,9 @@ function Main() {
     <>
       <Container >
         {/* <progress value={null} /> */}
+        <Row>
+          <Weather />
+        </Row>
         <Row>
           <ProductCarousel />
         </Row>
