@@ -1,0 +1,19 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - dev  # Или ваша основная ветка (например, master)
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Шаг 1: Проверить код из репозитория
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Шаг 4: Собрать проект
+      - name: Build project
+        run: npm run deploy
