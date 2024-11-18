@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - dev  # Или ваша основная ветка (например, master)
+      - main  # Или ваша основная ветка (например, master)
 
 jobs:
   deploy:
@@ -14,6 +14,26 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      # Шаг 2: Настроить Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '@latest'  # Укажите вашу версию Node.js
+
+      # Шаг 3: Установить зависимости
+      - name: Install dependencies
+        run: npm install
+
       # Шаг 4: Собрать проект
       - name: Build project
         run: npm run deploy
+
+      # Шаг 5: Деплой на GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages    # Ветка, на которую будет публиковаться приложение
+          folder: build       # Папка, куда попадают собранные файлы (по умолчанию "build")
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Секретный токен для деплоя
+          
