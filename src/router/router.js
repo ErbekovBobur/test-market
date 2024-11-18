@@ -49,6 +49,6 @@ export const router = createBrowserRouter(
             </Route>
         </Route>
     ), {
-                basename:'test-market'
+                basename: '/test-market'
             }
 );
