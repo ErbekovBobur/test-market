@@ -18,7 +18,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '@latest'  # Укажите вашу версию Node.js
+          node-version: '@letest'  # Укажите вашу версию Node.js
 
       # Шаг 3: Установить зависимости
       - name: Install dependencies
@@ -26,8 +26,8 @@ jobs:
 
       # Шаг 4: Собрать проект
       - name: Build project
-        run: npm run deploy
- 
+        run: npm run build
+
       # Шаг 5: Деплой на GitHub Pages
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
