@@ -34,8 +34,8 @@ function NavbarN() {
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav justify variant="underline" className="flex-fill" >
                                 <NavLink className="nav-link" to='/test-market/' >Главная</NavLink>
-                                <NavLink className="nav-link" to='/favorite' >Favorite</NavLink>
-                                {isAdmin && <NavLink className="nav-link" to='/admin' >Admin</NavLink>}
+                                <NavLink className="nav-link" to='/test-market/favorite' >Favorite</NavLink>
+                                {isAdmin && <NavLink className="nav-link" to='/test-market/admin' >Admin</NavLink>}
                             </Nav>
                         </Navbar.Collapse>
                     </Col>
