@@ -27,7 +27,7 @@ jobs:
       # Шаг 4: Собрать проект
       - name: Build project
         run: npm run deploy
-
+ 
       # Шаг 5: Деплой на GitHub Pages
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
