@@ -22,7 +22,7 @@ import NewComponent from "../component/New Component/newComponent";
 export const router = createBrowserRouter(
     createRoutesFromElements(
         <Route
-            path="/test-market/"
+            path="/"
             element={<Template />}
             // loader={rootLoader}
             // action={rootAction}
@@ -48,5 +48,7 @@ export const router = createBrowserRouter(
                 <Route path="newcomp" element={<NewComponent />} />
             </Route>
         </Route>
-    )
+    ), {
+                basename:'test-market'
+            }
 );
